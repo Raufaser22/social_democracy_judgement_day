@@ -1,5 +1,5 @@
 {
-  "name": " social_democracy_alternate_history",
+  "name": " social_democracy_judgement_day",
   "version": "0.11.1",
   "description": "Building the game:",
   "main": "out/html/index.html",
@@ -11,7 +11,7 @@
     "url": "git+https://aucchen@github.com/aucchen/social_democracy_alternate_history.git"
   },
   "keywords": [],
-  "author": "Autumn Chen",
+  "author": "Autumn Chen, modded by Raufasertapete",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/aucchen/social_democracy_alternate_history/issues"
