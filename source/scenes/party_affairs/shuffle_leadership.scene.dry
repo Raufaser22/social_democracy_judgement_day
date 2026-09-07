@@ -109,6 +109,14 @@ go-to: rm_main
 
 Pfülf has been removed as an advisor. The Reformist faction disapproves.
 
+@remove_scholz
+title: Remove Scholz
+view-if: scholz_advisor = 1
+tags: remove_advisor
+on-arrival: scholz_advisor = 0; center_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Scholz has been removed as an advisor. The Centrist faction disapproves.
 
 # labor
 
@@ -196,7 +204,14 @@ go-to: rm_main
 
 Siemsen has been removed as an advisor. The Leftist faction disapproves.
 
+@remove_bas
+title: Remove Bas
+view-if: bas_advisor = 1
+tags: remove_advisor
+on-arrival: bas_advisor = 0; left_dissent += 3; n_advisors -= 1
+go-to: rm_main
 
+Bas has been removed as an advisor. The Leftist faction disapproves.
 
 
 # neorevisionists
