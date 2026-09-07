@@ -21,8 +21,8 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 2021;
-Q.month = 5;
+Q.year = 1928;
+Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
@@ -306,14 +306,14 @@ Q.nsdap_r = 0;
 Q.other_r = 0;
 
 // diff from prev
-Q.old_spd_r = 26;
-Q.old_linke_r = 9;
-Q.old_cdu_r = 17;
-Q.old_greens_r = 6;
-Q.old_fdp_r = 10;
-Q.old_afd_r = 20;
-Q.old_nsdap_r = 3;
-Q.old_other_r = 9;
+Q.old_spd_r = 30;
+Q.old_linke_r = 11;
+Q.old_cdu_r = 49;
+Q.old_greens_r = 10;
+Q.old_fdp_r = 0;
+Q.old_afd_r = 0;
+Q.old_nsdap_r = 0;
+Q.old_other_r = 0;
 
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;

@@ -30,16 +30,15 @@ SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in g
 Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
-Federal President: [? if president == "Steinmeier (SPD)": <span style="color: #c00000;">[+ president +]</span> ?]
 
-Federal Chancellor: [? if chancellor == "Merkel": <span style="color: #000000;">[+ chancellor +] ([+ chancellor_party +])</span> ?] 
+President: [? if president == "Steinmeier (SPD)": <span style="color: #c00000;">[+ president +]</span> ?]
+Chancellor: [? if chancellor == "Merkel": <span style="color: #000000;">[+ chancellor +] ([+ chancellor_party +])</span> ?] 
 
 Bundestag composition:
 
 # 1928: 30, 1930: 25, 1932: 22
-{!<span class="tooltip-text" title="Social Democratic Party of Germany"style="color: #c00000;">SPD</span>!}: [+ spd_r +]%
-
-[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
+//{!<span class="tooltip-text" title="Social Democratic Party of Germany"style="color: #c00000;">SPD</span>!}: [+ spd_r +]%
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**SPD**</span>: [+ spd_r +]%
 
 # 1928: 15, 1930: 15, 1932: 12
 {!<span class="tooltip-text" title="Christian Democratic Union + Christian Social Union"><span style="color: #000000;">CDU</span> + <span style="color: #A2D8E0;">CSU</span></span>!}: [+ cdu_r +]%
@@ -48,7 +47,7 @@ Bundestag composition:
 {!<span class="tooltip-text" title="Free Democratic Party"style="color: #b9ae09;">FDP</span>!}: [+ fdp_r +]%
 
 # 1928: 10, 1930: 13
-{!<span class="tooltip-text" title="Die Linke"style="color: #be3075;">Linke</span>!}: [+ linke_r +]%
+{!<span class="tooltip-text" title="The Left"style="color: #be3075;">Linke</span>!}: [+ linke_r +]%
 
 # 1928: 5, 1930: 4 (as DstP)
 {!<span class="tooltip-text" title="the Greens"style="color: #409a3c;">Greens</span>!}: [+ greens_r +]%
@@ -61,6 +60,8 @@ Bundestag composition:
 
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
+
+[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
 

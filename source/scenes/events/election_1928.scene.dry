@@ -186,8 +186,8 @@ on-display: {!
 data = [
     {
         "id": "kpd",
-        "legend": "KPD",
-        "name": "KPD",
+        "legend": "The Left",
+        "name": "The Left",
         "seats": Math.round(Q.linke_r*5),
     }
 ];
@@ -207,28 +207,28 @@ data = data.concat([
         "seats": Math.round(Q.spd_r*5),
     },
     {
-        "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": Q.ddp_name,
+        "id": "greens",
+        "legend": "Greens",
+        "name": "Greens",
         "seats": Math.round(Q.greens_r*5),
     },
     {
-        "id": "z",
-        "legend": "Center",
-        "name": "Center",
+        "id": "fdp",
+        "legend": "FDP",
+        "name": "FDP",
+        "seats": Math.round(Q.fdp_r*5),
+    },
+    {
+        "id": "cdu",
+        "legend": "CDU/CSU",
+        "name": "CDU/CSU",
         "seats": Math.round((Q.cdu_r - 3)*5),
     },
     {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
-        "seats": Math.round(3*5),
-    },
-    {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Math.round(Q.fdp_r*5),
+        "id": "afd",
+        "legend": "AfD",
+        "name": "AfD",
+        "seats": Math.round(Q.afd_r*5),
     },
     {
         "id": "other",
@@ -236,12 +236,7 @@ data = data.concat([
         "name": "Other",
         "seats": Math.round(Q.other_r*5),
     },
-    {
-        "id": "dnvp",
-        "legend": "DNVP",
-        "name": "DNVP",
-        "seats": Math.round(Q.afd_r*5),
-    },
+
     {
         "id": "nsdap",
         "legend": "NSDAP",
