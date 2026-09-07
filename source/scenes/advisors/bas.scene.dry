@@ -2,7 +2,7 @@ title: Bärbel Bas
 is-pinned-card: true
 tags: advisor, leftist
 card-image: img/portraits/WelsOtto.jpg
-view-if: wels_advisor = 1
+view-if: bas_advisor = 1
 new-page: true
 
 = Bärbel Bas
