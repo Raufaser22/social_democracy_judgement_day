@@ -252,8 +252,6 @@ Q.linke_r = Q.linke_votes;
 Q.greens_r = Q.green_votes;
 Q.fdp_r = Q.fdp_votes;
 Q.afd_r = Q.afd_votes;
-Q.nsdap_r = Q.nsdap_votes;
-Q.other_r = Q.other_votes;
 
 // The largest party can only be the NSDAP or the SPD.
 Q.largest_party = 'SPD';
@@ -265,6 +263,11 @@ if (Q.linke_r >= Q.spd_r && Q.linke_r >= Q.nsdap_r) {
 }
 
 // coalitions
+Q.grand_coalition = Q.spd_r + Q.cdu_r;
+Q.traffic_light_coalition = Q.spd_r + Q.greens_r + Q.fdp_r;
+Q.red_red_green_coalition = Q.spd_r + Q.linke_r + Q.greens_r;
+Q.red_green_coalition = Q.spd_r + Q.greens_r;
+Q.red_coalition = Q.spd_r + Q.linke_r;
 Q.weimar_coalition = Q.spd_r + Q.greens_r + Q.cdu_r - 3;
 Q.grand_coalition = Q.spd_r + Q.greens_r + Q.cdu_r + Q.fdp_r;
 Q.bourgeois_coalition = Q.greens_r + Q.cdu_r + Q.fdp_r + Q.other_r;
@@ -287,25 +290,19 @@ The electoral system is essentially proportional, with the proportion of Reichst
 SPD: [+ spd_r +]
 
 # 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ cdu_r +]
+CDU/CSU: [+ cdu_r +]
 
 # 1928: 10, 1930: 13
-KPD: [+ linke_r +]
+Left: [+ linke_r +]
 
 # 1928: 5, 1930: 4 (as DstP)
-DDP: [+ greens_r +]
+Greens: [+ greens_r +]
 
 # 1928: 9, 1930: 5
-DVP: [+ fdp_r +]
+FDP: [+ fdp_r +]
 
 # 1928: 14, 1930: 7
-DNVP: [+ afd_r +]
-
-# 1928: 3, 1930: 18
-NSDAP: [+ nsdap_r +]
-
-# 1928: 9, 1930: 10
-Other: [+ other_r +]
+AfD: [+ afd_r +]
 
 **Potential coalitions:**
 
