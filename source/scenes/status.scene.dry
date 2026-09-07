@@ -52,8 +52,10 @@ Reichstag composition:
 {!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
 {!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_r +]%
-# 1928: 9, 1930: 10
+# 1928: 9, 1930: 9
 Others: [+ other_r +]%
+# 1928: 9, 1930: 1
+{!<span class="tooltip-text" title="Die Linke">Linke</span>!}: [+ linke_r +]%
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
 
