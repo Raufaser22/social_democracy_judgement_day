@@ -29,7 +29,7 @@ The customs union has been formed. Immediately, France and other neighboring cou
 
 @end_coalition
 view-if: spd_in_government = 1
-on-arrival: coalition_dissent += 1; dvp_relation -= 5; z_relation -= 4; z_relation -= 3 if chancellor_party == "Z"; dvp_relation -= 3 if chancellor_party == "Z"
+on-arrival: coalition_dissent += 1; fdp_relation -= 5; cdu_relation -= 4; cdu_relation -= 3 if chancellor_party == "Z"; fdp_relation -= 3 if chancellor_party == "Z"
 
 We attempt to impress upon our coalition partners the gravity of the potential Allied response. The proposal is dead, although the DVP and Center are not pleased.
 
@@ -37,7 +37,7 @@ We attempt to impress upon our coalition partners the gravity of the potential A
 @end_toleration
 view-if: spd_toleration = 1
 subtitle: This is difficult; all of the right-of-center parties support this policy.
-go-to: end_toleration_success if spd_r + kpd_r + ddp_r >= 50; end_toleration_fail if spd_r + kpd_r + ddp_r < 50
+go-to: end_toleration_success if spd_r + linke_r + greens_r >= 50; end_toleration_fail if spd_r + linke_r + greens_r < 50
 
 @end_toleration_success
 on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0;

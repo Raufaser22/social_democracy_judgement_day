@@ -101,12 +101,12 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.z_relation = 50;
-Q.kpd_relation = 25;
-Q.ddp_relation = 60;
-Q.dvp_relation = 35;
+Q.cdu_relation = 50;
+Q.linke_relation = 25;
+Q.greens_relation = 60;
+Q.fdp_relation = 35;
 // DNVP and NSDAP are invariably hostile
-Q.DNVP_relation = 10;
+Q.afd_relation = 10;
 Q.NSDAP_relation = 0;
 
 Q.kpd_leader = "Thälmann";
@@ -297,21 +297,21 @@ Q.catholics_other = 12;
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
 Q.spd_r = 26;
-Q.kpd_r = 9;
-Q.z_r = 17;
-Q.ddp_r = 6;
-Q.dvp_r = 10;
-Q.dnvp_r = 20;
+Q.linke_r = 9;
+Q.cdu_r = 17;
+Q.greens_r = 6;
+Q.fdp_r = 10;
+Q.afd_r = 20;
 Q.nsdap_r = 3;
 Q.other_r = 9;
 
 // diff from prev
 Q.old_spd_r = 26;
-Q.old_kpd_r = 9;
-Q.old_z_r = 17;
-Q.old_ddp_r = 6;
-Q.old_dvp_r = 10;
-Q.old_dnvp_r = 20;
+Q.old_linke_r = 9;
+Q.old_cdu_r = 17;
+Q.old_greens_r = 6;
+Q.old_fdp_r = 10;
+Q.old_afd_r = 20;
 Q.old_nsdap_r = 3;
 Q.old_other_r = 9;
 
@@ -596,11 +596,11 @@ For more information on the politics and government of the German Republic, see 
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; linke_relation = 29; cdu_relation = 54; fdp_relation = 49; budget = 5;
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; cdu_relation = 41; linke_relation = 16; fdp_relation = 31; budget = 3;
 go-to: 1928_main
 
 @1928_historical
@@ -615,9 +615,9 @@ Q.reformist_dissent = 25;
 Q.left_dissent = 30;
 Q.labor_dissent = 25;
 Q.center_dissent = 25;
-Q.z_relation = 41;
-Q.kpd_relation = 16;
-Q.dvp_relation = 31;
+Q.cdu_relation = 41;
+Q.linke_relation = 16;
+Q.fdp_relation = 31;
 Q.budget = 2;
 this.state.disableSaves = true;
 !}
