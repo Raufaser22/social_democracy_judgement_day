@@ -38,18 +38,18 @@ Chancellor: [+ chancellor +] ([+ chancellor_party +])
 Reichstag composition:
 
 # 1928: 30, 1930: 25, 1932: 22
-{!<span class="tooltip-text" title="Social Democratic Party of Germany"style="color: #c00000;">**SPD**</span>!}: [+ spd_r +]%
+{!<span class="tooltip-text" title="Social Democratic Party of Germany"style="color: #c00000;">SPD</span>!}: [+ spd_r +]%
 [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
-{!<span class="tooltip-text" title="Christian Democratic Union + Christian Social Union"><span style="color: #000000;">**CDU**</span> + <span style="color: #A2D8E0;">**CSU**</span>!}: [+ z_r +]%
-# 1928: 10, 1930: 13
-{!<span class="tooltip-text" title="Die Linke"style="color: #be3075;">**Linke**</span>!}: [+ kpd_r +]%
-# 1928: 5, 1930: 4 (as DstP)
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
+{!<span class="tooltip-text" title="Christian Democratic Union + Christian Social Union"><span style="color: #000000;">CDU</span> + <span style="color: #A2D8E0;">CSU</span>!}: [+ z_r +]%
 # 1928: 9, 1930: 5
-{!<span class="tooltip-text" title="Free Democratic Party"style="color: #ffed00;">FDP</span>!}: [+ dvp_r +]%
+{!<span class="tooltip-text" title="Free Democratic Party"style="color: #b9ae09;">FDP</span>!}: [+ dvp_r +]%
+# 1928: 10, 1930: 13
+{!<span class="tooltip-text" title="Die Linke"style="color: #be3075;">Linke</span>!}: [+ kpd_r +]%
+# 1928: 5, 1930: 4 (as DstP)
+{!<span class="tooltip-text" title="the Greens"style="color: #409a3c;">Greens</span>!}: [+ ddp_r +]%
 # 1928: 14, 1930: 7
-{!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_r +]%
+{!<span class="tooltip-text" title="Alternative for Germany"style="color: #00a2De;">AfD</span>!}: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
 {!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">NSDAP</span>!}: [+ nsdap_r +]%
 # 1928: 9, 1930: 10
