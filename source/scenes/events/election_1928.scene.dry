@@ -315,6 +315,8 @@ Who should be chancellor?
 title: Well, Olaf Scholz of course!
 on-arrival: chancellor = "Scholz"; chancellor_party = "SPD";
 
+- @ministries: Now, we must select our ministries.
+
 @grand_coalition
 title: A new GroKo under SPD?
 subtitle: SPD + CDU/CSU ([+ grand_coalition +]%) This is certainly an unpopular option with voters who expected a center-left government.
@@ -325,10 +327,6 @@ on-arrival: in_grand_coalition = 1; left_dissent += 4;
 The CDU/CSU, surprised by this move, has happily accepted! Now that coalition agreements are over, who should be chancelor?
 
 - @scholz_chancellor
-
-@scholz_chancellor
-title: Well, Olaf Scholz of course!
-on-arrival: chancellor = "Scholz"; chancellor_party = "SPD";
 
 @traffic_light
 title: The Traffic Light coalition as a broad progressive front!
@@ -341,12 +339,6 @@ The Greens and FDP have happily accepted! Now that coalition agreements are over
 
 - @scholz_chancellor
 
-@scholz_chancellor
-title: Well, Olaf Scholz of course!
-on-arrival: chancellor = "Scholz"; chancellor_party = "SPD";
-
-- @ministries: First, we must select our ministries.
-
 @red_red_green
 title: The Red-Red-Green coalition as a proper left government!
 subtitle: SPD + Greens + Left ([+ red_red_green_coalition +]%) While we hoped for a Red-Green coalition, this is the best we can do.
@@ -357,10 +349,6 @@ on-arrival: in_red_red_green_coalition = 1; labor_dissent += 4;
 The Greens and Left have happily accepted! Now that coalition agreements are over, who should be chancelor?
 
 - @scholz_chancellor
-
-@scholz_chancellor
-title: Well, Olaf Scholz of course!
-on-arrival: chancellor = "Scholz"; chancellor_party = "SPD";
 
 @red_green
 title: The Schröderian Red-Green coalition, to shake up this conservative country!
@@ -373,10 +361,6 @@ The Greens have happily accepted! Now that coalition agreements are over, who sh
 
 - @scholz_chancellor
 
-@scholz_chancellor
-title: Well, Olaf Scholz of course!
-on-arrival: chancellor = "Scholz"; chancellor_party = "SPD";
-
 @red_coalition
 title: A fully red coalition!
 subtitle: SPD + Left ([+ red_coalition +]%)
@@ -387,12 +371,6 @@ on-arrival: red_coalition = 1; labor_dissent += 4; center_dissent += 4;
 The Left have happily accepted! Now that coalition agreements are over, who should be chancelor?
 
 - @scholz_chancellor
-
-@scholz_chancellor
-title: Well, Olaf Scholz of course!
-on-arrival: chancellor = "Scholz"; chancellor_party = "SPD";
-
-- @ministries: First, we must select our ministries.
 
 @ministries
 
