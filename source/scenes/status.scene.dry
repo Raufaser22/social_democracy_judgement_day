@@ -37,7 +37,7 @@ Chancellor: [? if chancellor == "Merkel": <span style="color: #000000;">[+ chanc
 Bundestag composition:
 
 # 1928: 30, 1930: 25, 1932: 22
-//{!<span class="tooltip-text" title="Social Democratic Party of Germany"style="color: #c00000;">SPD</span>!}: [+ spd_r +]%
+# {!<span class="tooltip-text" title="Social Democratic Party of Germany"style="color: #c00000;">SPD</span>!}: [+ spd_r +]%
 <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**SPD**</span>: [+ spd_r +]%
 
 # 1928: 15, 1930: 15, 1932: 12
