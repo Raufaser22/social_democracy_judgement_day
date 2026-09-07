@@ -167,7 +167,7 @@ tags: remove_advisor
 on-arrival: bas_advisor = 0; left_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Bas has been removed as an advisor. The Parliamentarische Linke faction disapproves.
+Bas has been removed as an advisor. The Parliamentarische Left faction disapproves.
 
 @remove_levi
 title: Remove Levi

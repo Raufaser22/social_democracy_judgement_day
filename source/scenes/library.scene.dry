@@ -80,7 +80,7 @@ Bundestag composition:
 # 1928: 9, 1930: 5
 {!<span class="tooltip-text" title="Free Democratic Party"style="color: #b9ae09;">FDP</span>!}: [+ fdp_r +]%
 # 1928: 10, 1930: 13
-{!<span class="tooltip-text" title="The Left"style="color: #be3075;">Linke</span>!}: [+ linke_r +]%
+{!<span class="tooltip-text" title="The Left"style="color: #be3075;">Left</span>!}: [+ linke_r +]%
 # 1928: 5, 1930: 4 (as DstP)
 {!<span class="tooltip-text" title="the Greens"style="color: #409a3c;">Greens</span>!}: [+ greens_r +]%
 # 1928: 14, 1930: 7
@@ -167,7 +167,7 @@ SPD: [+ spd_votes +]%
 CDU/CSU: [+ cdu_votes +]%
 
 # 1928: 10, 1930: 13
-Linke: [+ linke_votes +]%
+Left: [+ linke_votes +]%
 
 # 1928: 5, 1930: 4 (as DstP)
 Greens: [+ green_votes +]%
@@ -332,8 +332,8 @@ on-display: {!
 data = [
     {
         "id": "linke",
-        "legend": "Linke",
-        "name": "Linke",
+        "legend": "Left",
+        "name": "Left",
         "seats": Q.linke_r*5,
     }];
 if (Q.sapd_formed && Q.sapd_r) {
