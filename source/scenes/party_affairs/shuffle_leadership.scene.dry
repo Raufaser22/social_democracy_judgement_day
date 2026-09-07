@@ -392,6 +392,18 @@ tags: center_advisor
 
 Rudolf Breitscheid is now an advisor.
 
+@add_scholz
+title: Olaf Scholz
+subtitle: Olaf Scholz [? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
+is-card: true
+card-image: img/portraits/ScholzOlaf.jpg
+view-if: scholz_advisor = 0 and n_advisors < 3
+on-arrival: scholz_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: center_advisor
+
+Olaf Scholz is now an advisor.
+
 # reformist
 
 
@@ -507,7 +519,17 @@ tags: left_advisor
 
 Anna Siemsen is now an advisor.
 
+@add_bas
+title: Bärbel Bas
+subtitle: Bärbel Bas {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
+is-card: true
+card-image: img/portraits/WelsOtto.jpg
+view-if: bas_advisor = 0 and n_advisors < 3 and left_split = 0
+on-arrival: bas_advisor = 1; n_advisors += 1; left_strength += 5
+go-to: advisor_menu
+tags: left_advisor
 
+Bärbel Bas is now an advisor.
 
 # labor
 
