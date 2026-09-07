@@ -523,7 +523,7 @@ Anna Siemsen is now an advisor.
 title: Bärbel Bas
 subtitle: Bärbel Bas {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
 is-card: true
-card-image: img/portraits/WelsOtto.jpg
+card-image: img/portraits/BasBaerbel.jpg
 view-if: bas_advisor = 0 and n_advisors < 3 and left_split = 0
 on-arrival: bas_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
