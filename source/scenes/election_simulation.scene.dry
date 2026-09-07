@@ -247,11 +247,11 @@ set-jump: post_election
 on-arrival: {!
 // set congress proportion to votes
 Q.spd_r = Q.spd_votes;
-Q.cdu_r = Q.z_votes;
-Q.linke_r = Q.kpd_votes;
-Q.greens_r = Q.ddp_votes;
-Q.fdp_r = Q.dvp_votes;
-Q.afd_r = Q.dnvp_votes;
+Q.cdu_r = Q.cdu_votes;
+Q.linke_r = Q.linke_votes;
+Q.greens_r = Q.green_votes;
+Q.fdp_r = Q.fdp_votes;
+Q.afd_r = Q.afd_votes;
 Q.nsdap_r = Q.nsdap_votes;
 Q.other_r = Q.other_votes;
 

@@ -71,7 +71,7 @@ Fine. We have thrown our support to Chairman Thälmann of the KPD.
 - @final_election: The final vote...
 
 @convince_z
-choose-if: spd_votes >= z_votes
+choose-if: spd_votes >= cdu_votes
 unavailable-subtitle: The Center knows that they are more popular than us; they do not see a reason to support our candidate.
 on-arrival: {!
 Q.z_support_braun = 0;
@@ -115,7 +115,7 @@ go-to: braun_campaign
 Unfortunately, we fail to turn them away from Hindenburg.
 
 @convince_kpd
-choose-if: spd_votes >= kpd_votes
+choose-if: spd_votes >= linke_votes
 unavailable-subtitle: The KPD knows that they are more popular than us; they do not see a reason to support our candidate.
 max-visits: 1
 
@@ -292,7 +292,7 @@ There is no majority in this round. In the second round, any candidate who wins 
 
 @round2_convince_z
 view-if: braun_campaign > 0 and z_support_braun != 1 
-choose-if: spd_votes >= z_votes
+choose-if: spd_votes >= cdu_votes
 unavailable-subtitle: The Center knows that they are more popular than us; they do not see a reason to support our candidate.
 on-arrival: {!
 Q.z_support_braun = 0;
@@ -317,11 +317,11 @@ max-visits: 1
 
 @r2_z_success
 go-to: round2_menu
-on-departure: hitler_support_hindenburg = 1 if braun_votes + z_votes > hitler_votes
+on-departure: hitler_support_hindenburg = 1 if braun_votes + cdu_votes > hitler_votes
 
 [? if hitler_support_hindenburg : The Center's opinion is affected by the Nazis' support of Hindenburg, and is willing to turn away from him. ?] The Center are convinced! They will be part of the Braun coalition. [? if hitler_support_hindenburg : In addition, they will also bring in some minor parties who will support us. ?]
 
-[? if not hitler_support_hindenburg and braun_votes + z_votes > hitler_votes: With the Center Party supporting Braun, [+ nsdap_candidate +] has dropped out of the race, and the Nazis have endorsed Hindenburg to prevent a socialist from becoming president. ?]
+[? if not hitler_support_hindenburg and braun_votes + cdu_votes > hitler_votes: With the Center Party supporting Braun, [+ nsdap_candidate +] has dropped out of the race, and the Nazis have endorsed Hindenburg to prevent a socialist from becoming president. ?]
 
 @r2_z_partial
 
@@ -335,12 +335,12 @@ choose-if: resources >= 2
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources (need 2)
 on-arrival: resources -= 2; z_support_braun = 1
-on-departure: hitler_support_hindenburg = 1 if braun_votes + z_votes > hitler_votes
+on-departure: hitler_support_hindenburg = 1 if braun_votes + cdu_votes > hitler_votes
 go-to: round2_menu
 
 With our resources, the Center are convinced to support Braun over Hindenburg.
 
-[? if not hitler_support_hindenburg and braun_votes + z_votes > hitler_votes: With the Center Party supporting Braun, [+ nsdap_candidate +] has dropped out of the race, and the Nazis have endorsed Hindenburg to prevent a socialist from becoming president. ?]
+[? if not hitler_support_hindenburg and braun_votes + cdu_votes > hitler_votes: With the Center Party supporting Braun, [+ nsdap_candidate +] has dropped out of the race, and the Nazis have endorsed Hindenburg to prevent a socialist from becoming president. ?]
 
 @r2_z_failed
 go-to: round2_menu
@@ -351,7 +351,7 @@ Unfortunately, we fail to turn them away from Hindenburg. [? if hindenburg_votes
 
 
 @round2_convince_kpd
-choose-if: spd_votes >= kpd_votes
+choose-if: spd_votes >= linke_votes
 unavailable-subtitle: The KPD knows that they are more popular than us; they do not see a reason to support our candidate.
 view-if: braun_campaign > 0 and kpd_support_braun == 0 
 max-visits: 1

@@ -229,8 +229,8 @@ We implore the Center Party to support [+ spd_candidate +] as a unity candidate 
 # convincing Z to support an SPD candidate
 @convince_z_spd
 title: Convince the Center Party to support [+ spd_candidate +].
-choose-if: spd_votes >= z_votes
-unavailable-subtitle: [? if spd_votes < z_votes: The Center knows that they are more popular than us; they do not see a reason to support our candidate. ?]
+choose-if: spd_votes >= cdu_votes
+unavailable-subtitle: [? if spd_votes < cdu_votes: The Center knows that they are more popular than us; they do not see a reason to support our candidate. ?]
 view-if: (spd_candidate = "Braun" or spd_candidate = "Schumacher" or spd_candidate = "Juchacz" or is_cultural_candidate) and z_candidate != spd_candidate
 on-arrival: {!
 Q.z_support_braun = 0;
@@ -313,7 +313,7 @@ max-visits: 1
 @convince_kpd_spd
 title: Convince the KPD to support [+ spd_candidate +].
 view-if: (spd_candidate = "Braun" or spd_candidate = "Schumacher" or spd_candidate = "Juchacz" or is_cultural_candidate) and kpd_candidate != spd_candidate
-choose-if: spd_votes >= kpd_votes
+choose-if: spd_votes >= linke_votes
 unavailable-subtitle: The KPD knows that they are more popular than us; they do not see a reason to support our candidate.
 max-visits: 1
 
@@ -453,7 +453,7 @@ Election results:
 
 [? if Braun_running : Braun - [+ Braun_votes_disp +]% ?]
 [? if Schumacher_running : Schumacher - [+ Schumacher_votes_disp +]% ?]
-[? if Juchaccdu_running : Juchacz - [+ Juchacz_votes_disp +]% ?]
+[? if Juchaccdu_running : Juchacz - [+ Juchaccdu_votes_disp +]% ?]
 # cultural candidates
 [? if Einstein_running : Einstein - [+ Einstein_votes_disp +]% ?]
 [? if Ossietzky_running : Ossietzky - [+ Ossietzky_votes_disp +]% ?]
@@ -664,10 +664,10 @@ Do we realize that this means civil war, against the full force of the state?
 
 @defeat_democratic
 on-arrival: {!
-Q.pro_democracy_votes = Q.spd_votes + Q.ddp_votes + Q.z_votes - (Q.sa_strength*Q.sa_militancy/10) + (Q.rb_strength*Q.rb_militancy/10);
+Q.pro_democracy_votes = Q.spd_votes + Q.green_votes + Q.cdu_votes - (Q.sa_strength*Q.sa_militancy/10) + (Q.rb_strength*Q.rb_militancy/10);
 if (Q.pro_republic >= 60) {
-    Q.pro_democracy_votes += Q.kpd_votes;
-    Q.pro_democracy_votes += Q.dvp_votes;
+    Q.pro_democracy_votes += Q.linke_votes;
+    Q.pro_democracy_votes += Q.fdp_votes;
 }
 !}
 go-to: ref_win if pro_democracy_votes >= 50; ref_lose if pro_democracy_votes < 50
