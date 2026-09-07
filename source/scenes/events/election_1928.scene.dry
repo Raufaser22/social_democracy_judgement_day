@@ -88,33 +88,39 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 // get change arrows and signs
 
 
-// The largest party can only be the NSDAP or the SPD.
+// The largest party can only be the AfD or the SPD.
 Q.largest_party = 'SPD';
-if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
-    Q.largest_party = 'NSDAP';
+if (Q.afd_r >= Q.spd_r && Q.afd_r >= Q.cdu_r) {
+    Q.largest_party = 'AfD';
 }
 
-if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
-    Q.largest_party = 'KPD';
+if (Q.cdu_r >= Q.spd_r && Q.cdu_r >= Q.afd_r) {
+    Q.largest_party = 'CDU/CSU';
 }
 
 // coalitions
-Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r - 3;
-Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
-Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
-Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
-Q.left_coalition = Q.spd_r + Q.kpd_r + Q.sapd_r;
+Q.grand_coalition = Q.spd_r + cdu_r;
+Q.traffic_light_coalition = Q.spd_r + Q.greens_r + Q.fdp_r;
+Q.red_red_green_coalition = Q.spd_r + Q.greens_r + Q.fdp_r;
+Q.red_green_coalition = Q.spd_r + Q.greens_r;
+Q.red_coalition = Q.spd_r + Q.linke_r;
+
+#Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r - 3;
+#Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
+#Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
+#Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
+#Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
+#Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
+#Q.left_coalition = Q.spd_r + Q.kpd_r + Q.sapd_r;
 // this is an absurd concept lol
-Q.popular_front_coalition = Q.spd_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3 + Q.sapd_r;
-Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r + Q.dnvp_r;
+#Q.popular_front_coalition = Q.spd_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3 + Q.sapd_r;
+#Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r + Q.dnvp_r;
 // aka everyone except nazi, kpd, dnvp
-Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
+#Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
 // Hitler + Right-wing parties (only comes into effect if you've alienated Z too badly)
-Q.hitler_right_coalition = Q.z_r + Q.dnvp_r + Q.nsdap_r;
+#Q.hitler_right_coalition = Q.z_r + Q.dnvp_r + Q.nsdap_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
-Q.progressive_coalition = Q.spd_r + Q.kpd_r + Q.ddp_r + Q.sapd_r;
+#Q.progressive_coalition = Q.spd_r + Q.kpd_r + Q.ddp_r + Q.sapd_r;
 
 if (Q.kpd_relation >= 30) {
     Q.weimar_coalition += Q.sapd_r;
@@ -188,7 +194,7 @@ data = data.concat([
         "id": "kpd",
         "legend": "KPD",
         "name": "KPD",
-        "seats": Math.round(Q.linke_r_r*5),
+        "seats": Math.round(Q.linke_r*5),
     },
     {
         "id": "spd",
@@ -236,7 +242,7 @@ if (window && d3) {
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
-    d3.select("#reichstag").datum(data).call(parliament);
+    d3.select("reichstag").datum(data).call(parliament);
 }
 !}
 go-to: coalition_menu
