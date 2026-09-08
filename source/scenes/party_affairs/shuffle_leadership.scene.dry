@@ -246,6 +246,15 @@ Schumacher has been removed as an advisor. The Neorevisionist faction disapprove
 
 ## nonfactional
 
+@remove_bullmann
+title: Remove Bullmann
+view-if: bullmann_advisor = 1
+tags: remove_advisor
+on-arrival: bullmann_advisor = 0; n_advisors -= 1
+go-to: rm_main
+
+Bullmann has been removed as an advisor.
+
 # tbh I'm not sure if Baade should be a reformist or nonfactional. same for stampfer. they were vaguely reformist-aligned but had pretty different ideas from the other reformists here. so they're non-factional.
 
 @remove_baade
@@ -622,6 +631,18 @@ tags: neorev_advisor
 Julius Leber is now an advisor.
 
 # Nonfactional advisors
+
+@add_bullmann
+title: Udo Bullmann
+subtitle: Udo Bullmann...{!<br><br>!}[? if difficulty < 0 : Actions - European Coordination ?]
+is-card: true
+card-image: img/portraits/BullmannUdo.jpg
+view-if: bullmann_advisor = 0 and n_advisors < 3
+on-arrival: bullmann_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: nonfactional_advisor
+
+Udo Bullmann is now an advisor.
 
 @add_baade
 title: Fritz Baade

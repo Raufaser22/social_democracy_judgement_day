@@ -1,0 +1,20 @@
+title: Udo Bullmann
+is-pinned-card: true
+tags: advisor
+card-image: img/portraits/BullmannUdo.jpg
+view-if: bullmann_advisor = 1
+new-page: true 
+
+= Udo Bullmann
+
+Bullmann
+
+- @working_with_europe: European coordination.
+- @root: Return to main
+
+@working_with_europe
+title: European Coordination
+subtitle: Bullmann is a long standing member of the european parliament and has expanded our coordination with the S&D party.
+choose-if: advisor_action_timer <= 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; last_advisor_action = 1; european_unity += 3;
