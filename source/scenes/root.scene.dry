@@ -18,6 +18,7 @@ go-to: start_menu_2
 
 @start
 on-arrival: {!
+Q.always_false = 0
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
@@ -625,13 +626,13 @@ this.state.disableSaves = true;
 go-to: 1928_main
 
 @1928_main
-audio: shuffle music/1928_1930/vision-2020-vision.mp3
+audio: shuffle music/1928_1930/vision-2020-vision.mp3 music/1928_1930/falco-titanic.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 2021
 
-It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
+It is not a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
 
 Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
 
