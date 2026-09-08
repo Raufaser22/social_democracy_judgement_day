@@ -31,14 +31,14 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [? if president != "Steinmeier": <span style="color: #c00000;">[+ president +] ([+ president_party +])</span> ?]
+President: [+ president +]
 
-Chancellor: [? if chancellor == "Merkel": <span style="color: #000;">[+ chancellor +] ([+ chancellor_party +])</span> ?]
+Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
-Bundestag composition:
+Reichstag composition:
 
 # 1928: 30, 1930: 25, 1932: 22
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**SPD**</span>: [+ spd_r +]%
+{!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ spd_r +]%
 [? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
 {!<span class="tooltip-text" title="Center Party + Bavarian People's Party">Z + BVP</span>!}: [+ z_r +]%
